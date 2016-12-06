@@ -2,72 +2,108 @@
 <html lang- en>
 
 <head>
-  <style type = "text/CSS">
-
-  button {
-
-      font-family: 'Fjalla One', sans-serif;
-      font-size: 26px;
-      font-style: italic;
-      font-weight:;
-      line-height: 100%;
-      color: #fff;
-      text-align: center;
-      background-color: #0C7D8B;
-
-      text-decoration: none;
-      position: relative;
-      display: block;
-      width: 150px;
-      margin: 0 auto;
-      border-radius: 5px;
-     }
-
-  input[type=text] {
-  	border-radius: 5px;
-  	border-color: #0C7D8B;
-  	color: #0C7D8B;
-  	font-family: 'Fjalla One', sans-serif;
-  	font-size: 12pt;
-
-  	text-align: center;
-  	position: relative;
-  	display: block;
-  	margin: 0 auto;
-  	/*Pull in CSS for designed text box*/ 
-  }
-
-  label {
-  	font-family: 'Fjalla One', sans-serif;
-  	color: #0C7D8B;
-  	font-weight: bold;
-  	font-size:13pt;
-
-  	position: relative;
-  	text-align: center;
-  	margin: 0 auto;
-  	display: block;
-  }
+	<script type="text/javascript">
+		function inputFocus(i){
+			if(i.value==i.defaultValue){ i.value=""; i.style.color="#0C7D8B"; }
+		}
+		function inputBlur(i){
+			if(i.value==""){ i.value=i.defaultValue; i.style.color="#cad3b8"; }
+		}
+	</script>
 
 
-  </style>
+<style type = "text/CSS">
+
+	#login {
+		width:325px;
+		margin:auto;
+		margin-top:200px;
+		background-color: rgba(146, 195, 55, 0.75);;
+		border-radius: 3px;
+		height: 325px;
+
+
+	}
+
+	button {
+
+		font-family: 'Fjalla One', sans-serif;
+		font-size: 26px;
+		font-weight:;
+		line-height: 100%;
+		color: #fff;
+		text-align: center;
+		background-color: #0C7D8B;
+
+		text-decoration: none;
+		position: relative;
+		display: block;
+		width: 100px;
+		padding:10px;
+		margin: 0 auto;
+		border-radius: 5px;
+	}
+
+	input[type=text] {
+		border-radius: 3px;
+		background-color: #E7F2D3;
+		
+		color: #0C7D8B;
+		font-family: 'Fjalla One', sans-serif;
+		font-size: 14pt;
+		line-height: 100%;
+		width:150px;
+		padding:10px;
+
+		text-align: center;
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		/*Pull in CSS for designed text box*/ 
+	}
+
+	label {
+		font-family: 'Fjalla One', sans-serif;
+		color: #0C7D8B;
+		font-weight: bold;
+		font-size:13pt;
+
+
+		position: relative;
+		text-align: center;
+		margin: 0 auto;
+		display: block;
+	}
+	body {
+		background-image: url("login.jpg");
+	}
+
+
+</style>
 
 </head>
 
 <body>
-  <div>
-  <br>
-    <label for ="name"> Email </label>
-    <input type="text" value="" id="input"></input>
-    <br>
-    <label for ="name"> Password </label>
-    <input type="text" value="" id="input"></input>
 
-    <br>
 
-  </div>
+	<div id="login">
 
-  <div>
-    <button class="button" onclick="Login to Dashboard">Login</button>
-  </div>
+		<br>
+		<br>
+		<br>
+		<input type="text" name="firstname" title="First Name" style="color:#cad3b8;" 
+		value="email" onfocus="inputFocus(this)" onblur="inputBlur(this)"></input>
+		<br>
+		<input type="text" name="firstname" title="First Name" style="color:#cad3b8;" 
+		value="password" onfocus="inputFocus(this)" onblur="inputBlur(this)"></input>
+		<br>
+		<br>
+		<button class="button" onclick="Login to Dashboard">Login</button>		
+		<br>
+	</div>
+
+	
+		
+	
+	
 </body>
